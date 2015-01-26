@@ -6,7 +6,7 @@
 /*   By: ade-bonn <ade-bonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/30 11:04:01 by ade-bonn          #+#    #+#             */
-/*   Updated: 2015/01/06 23:44:37 by ade-bonn         ###   ########.fr       */
+/*   Updated: 2015/01/13 14:45:50 by ade-bonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,7 @@ int					loop_hook(t_env *e);
 int					key_hook(int keycode, t_env *e);
 int					key_hook_r(int keycode, t_env *e);
 
-int				init_map(t_env *e);
+int					init_map(t_env *e);
 
 void				move_right(t_env *e);
 void				move_left(t_env *e);
