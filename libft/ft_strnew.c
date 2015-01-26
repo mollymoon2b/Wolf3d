@@ -6,7 +6,7 @@
 /*   By: ade-bonn <ade-bonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 15:00:01 by ade-bonn          #+#    #+#             */
-/*   Updated: 2014/11/09 15:00:02 by ade-bonn         ###   ########.fr       */
+/*   Updated: 2015/01/06 23:27:11 by ade-bonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ char	*ft_strnew(size_t size)
 
 	tmp = (void *)ft_memalloc(size + 1);
 	if (tmp == NULL)
-		return ((char *)NULL);
+		return (0);
 	return (tmp);
 }

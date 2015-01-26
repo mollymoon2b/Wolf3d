@@ -18,15 +18,15 @@ MLXFLAGS = -L/usr/X11/lib -lmlx -lX11 -lXext
 all: $(NAME)
 
 $(NAME):
-	make -C libft
-	$(CC) $(CFLAGS) $(MLXFLAGS) -o $(NAME) $(SRC) -L libft -lft
+	@make -C libft
+	@$(CC) $(CFLAGS) $(MLXFLAGS) -o $(NAME) $(SRC) -L libft -lft
 
 clean:
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean: clean
-	make fclean -C libft
-	rm -rf $(NAME)
+	@make fclean -C libft
+	@rm -rf $(NAME)
 
 re: fclean all
 

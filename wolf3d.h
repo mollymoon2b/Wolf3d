@@ -6,14 +6,14 @@
 /*   By: ade-bonn <ade-bonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/30 11:04:01 by ade-bonn          #+#    #+#             */
-/*   Updated: 2015/01/02 13:34:51 by ade-bonn         ###   ########.fr       */
+/*   Updated: 2015/01/06 23:44:37 by ade-bonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WOLF3D_H
 # define WOLF3D_H
 # define WIN_WIDTH 1080
-# define WIN_HEIGHT 720
+# define WIN_HEIGHT 580
 # define MAP_WIDTH 24
 # define MAP_HEIGHT 24
 # define BUFF_SIZE 32
@@ -133,7 +133,7 @@ int					loop_hook(t_env *e);
 int					key_hook(int keycode, t_env *e);
 int					key_hook_r(int keycode, t_env *e);
 
-void				init_map(t_env *e);
+int				init_map(t_env *e);
 
 void				move_right(t_env *e);
 void				move_left(t_env *e);

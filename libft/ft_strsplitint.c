@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map.c                                           :+:      :+:    :+:   */
+/*   ft_strsplitint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-bonn <ade-bonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/02 09:52:27 by ade-bonn          #+#    #+#             */
-/*   Updated: 2015/01/06 23:25:49 by ade-bonn         ###   ########.fr       */
+/*   Created: 2015/01/02 12:10:14 by ade-bonn          #+#    #+#             */
+/*   Updated: 2015/01/02 12:11:15 by ade-bonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "libft.h"
+#include <stdlib.h>
 
 int		size_word(char *s, char c)
 {
@@ -69,35 +70,9 @@ int		*ft_strsplitint(char const *s, char c)
 		i++;
 	}
 	tab = (int *)malloc(sizeof(int) * nb_w);
-	if (tab == NULL)
-		return (0);
 	if (tab)
 		put_int_in_tab(nb_w, c, tab, (char*)s);
 	else
 		return (NULL);
 	return (tab);
-}
-
-int		init_map(t_env *e)
-{
-	int		fd;
-	char	*buff;
-	int		i;
-
-	i = 0;
-	buff = NULL;
-	e->world_map = (int**)malloc(sizeof(int*) * MAP_HEIGHT);
-	if (e->world_map == NULL)
-		return (0);
-	fd = open("./map.txt", O_RDONLY);
-	if (fd == -1)
-		ft_error("Map mot found.");
-	while (get_next_line(fd, &buff) == 1)
-	{
-		e->world_map[i] = ft_strsplitint(buff, ' ');
-		free(buff);
-		i++;
-	}
-	close (fd);
-	return (0);
 }

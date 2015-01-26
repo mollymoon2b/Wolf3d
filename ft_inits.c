@@ -6,7 +6,7 @@
 /*   By: ade-bonn <ade-bonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/02 10:55:16 by ade-bonn          #+#    #+#             */
-/*   Updated: 2015/01/02 13:36:35 by ade-bonn         ###   ########.fr       */
+/*   Updated: 2015/01/03 09:59:55 by ade-bonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ void	init_move(t_env *e)
 	e->move.sec = e->move.time.tv_sec;
 	e->time = ((e->move.sec) * 1000 + e->move.usec / 1000.0) + 0.5;
 	e->frame_time = (e->time - e->old_time);
-	e->move.movespeed = e->frame_time * 0.005;
-	e->move.rotspeed = e->frame_time * 0.003;
+	e->move.movespeed = e->frame_time * 0.0035;
+	e->move.rotspeed = e->frame_time * 0.0015;
 }
 
 void	init_env(t_env *e)

@@ -17,9 +17,10 @@ void	ft_error(char *s)
 	ft_putendl_fd(s, 2);
 	exit(1);
 }
-
+#include <stdio.h>
 int		shoot(int button, int x, int y, t_env *e)
 {
+	printf("Button = %i\n", button);
 	if (button == 1)
 	{
 		e->draw.x = x;
@@ -33,7 +34,7 @@ int		shoot(int button, int x, int y, t_env *e)
 		}
 		calc_wall_dist(e);
 		calc_line_height(e);
-		if (e->world_map[e->draw.mapx][e->draw.mapy] > 1
+		if (e->world_map[e->draw.mapx][e->draw.mapy] > 2
 					&& e->draw.draw_start < y && e->draw.draw_end > y)
 			e->world_map[e->draw.mapx][e->draw.mapy] = 0;
 		ft_draw(e);
